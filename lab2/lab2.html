@@ -1,0 +1,82 @@
+﻿<!doctype html>
+    <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>Canvas</title>
+            <style>
+                body {
+                    background-color: rgb(91, 173, 173);
+                }
+            </style>
+        </head>
+        <body>
+            <canvas id='draw' width='500' height='400'></canvas>
+            <canvas id='draw1' width='500' height='400'></canvas>
+            <script>
+                var canvas = document.getElementById("draw");
+                var x = canvas.getContext("2d");
+                x.shadowOffsetX=3;
+                x.shadowOffsetY=3;
+                x.shadowBlur=5;
+                x.shadowColor='black';
+                x.fillStyle='#ffaa00';
+                x.beginPath();
+                x.moveTo(75,50);
+                x.lineTo(100,75);
+                x.lineTo(100,25);
+                x.lineTo(150,75);
+                x.lineTo(200,20);
+                x.lineTo(100,100);
+                x.fill();
+                x.fillRect(55,40,55,55);
+                x.strokeRect(150,70,55,55);
+                x.clearRect(68,57,20,20);
+                x.shadowOffsetX=3;
+                x.shadowOffsetY=3;
+                x.shadowBlur=5;
+                x.shadowColor='black';
+                x.fillStyle='#ffaa00';
+                x.font='15px Verdana';
+                x.fillStyle='#60016d';
+                x.fillText("Муковозчик Алексей", 40, 150);
+
+
+x.fillText("Количество лет в различных заведениях", 150, 200);
+x.fillStyle = "red";
+x.beginPath();
+x.arc(300, 300, 50, 14*Math.PI/7, 0, false);
+x.lineTo(300,300);
+x.fill();
+x.fillText("0.5 лет в садике", 360, 325);
+x.fillStyle = "black";
+x.beginPath();
+x.arc(300, 300, 50, 15*Math.PI/7, 0, false);
+x.lineTo(300,300);
+x.fill();
+x.fillText("7 лет школы", 130, 300);
+x.fillStyle = "pink";
+x.beginPath();
+x.arc(300, 300, 50, -Math.PI/180*90, 0, false);
+x.lineTo(300,300);
+x.fill();
+x.fillText("2 года в университете", 325, 250);
+
+
+        var canvas = document.getElementById("draw1");
+        var x = canvas.getContext("2d");
+		x.fillRect(60,70,20,150);
+		x.fillStyle="pink";
+		x.fillRect(100,30,20,190);
+		var grad =x.createLinearGradient(0,0,0,150);
+        var grad =x.createLinearGradient(0,0,0,150);
+        grad.addColorStop(0.0,'black');
+        grad.addColorStop(1.0,'white');
+        x.fillStyle=grad;
+        x.fillRect(20,20,20,200);
+
+
+
+         </script>
+        </body>
+        
+    </html>

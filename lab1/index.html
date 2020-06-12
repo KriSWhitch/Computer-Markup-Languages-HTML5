@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Лабораторная по HTML5 №1</title>
+    <script>
+        function getCoordinates() {
+        navigator.geolocation.getCurrentPosition(showCoordinates);
+        }
+        function showCoordinates(position) {
+        document.write("Широта:" + position.coords.latitude + "<br/>");
+        document.write("Долгота:" + position.coords.longitude);
+        }
+    </script>
+</head>
+<body>
+    <div class="task1">
+        <h1 style="text-align: center;">Я, <mark> Муковозчик Алексей Витальевич</mark>, изучаю HTML5</h1>
+    </div>
+    
+    <div class="task2">
+        <audio controls="controls" style="margin-bottom:2em; display:block;" src="MTV.mp3"></audio>
+        <video controls="controls" style="display:block;" src="DisneyIntro.mp4"></video>
+    </div>
+    <div class="task3">
+        <p>Для считывания координат нажмите на кнопку</p>
+        <input type="button" value=" Координаты" onclick =
+        "getCoordinates()">
+
+    </div>
+</body>
+</html>
